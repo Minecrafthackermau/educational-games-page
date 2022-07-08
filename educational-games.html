@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Games 💻</title>
+    <style>
+      body {
+        background: linear-gradient(
+          44.8deg,
+          rgba(255, 136, 102, 0.67) -53.1%,
+          rgba(255, 221, 136, 0.28) 49%
+        );
+        width: 60%;
+        margin: 60px auto;
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+        color: #f0d43a;
+        font-family: Verdana;
+
+        margin: 4px auto;
+        font-size: 2.1em;
+      }
+      h2 {
+        text-align: center;
+        color: #5f6caf;
+        font-family: "PT Mono", monospace;
+        margin: 10px;
+        font-size: 1.48em;
+      }
+
+      h3 {
+        text-align: center;
+        color: #5f6caf;
+        background-color: #fff6de;
+        border-color: #fff6de;
+        padding: 10px 10px;
+        border-radius: 4px;
+        font-family: "PT Mono", monospace;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 8px;
+        border: 0.75px solid #7a84b9;
+      }
+
+      button {
+        margin: 20px auto;
+        display: block;
+        background-color: #5f6caf;
+        color: white;
+        font-size: 15px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        transition: all 150ms ease-in-out;
+        font-family: verdana;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+
+      p {
+        line-height: 1.75;
+        font-size: 15px;
+        margin: 20px 0 10px;
+        font-family: Verdana;
+        font-weight: lighter;
+        color: rgb(66, 66, 66);
+      }
+
+      .content {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px 60px 30px 60px;
+        border-radius: 12px;
+      }
+
+      .free-onlineGames {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #5f6caf;
+        font-size: 14px;
+        font-family: Verdana;
+
+        text-align: center;
+      }
+
+      .free-onlineGames:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        text-align: center;
+        font-weight: lighter;
+        font-size: 12px;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content">
+      <h1>Close the Gap</h1>
+      <h2>Online Educational Games for Kids</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/027/757/original/kidsongames.jpeg?1645465839"
+        alt="Kids Playing"
+        width="450"
+      />
+
+      <h3>Playing While Learning</h3>
+      <p>
+        Was your child's education affected by the pandemic? Do you want good
+        resources and games to help them close those learning gaps? I have
+        created a list of online games that will target those specific reading
+        and math skills your student needs. Many of the games will assess their
+        progress along the way. Click the link below to receive an email of
+        resources catered to your student.
+      </p>
+
+      <button class="rec-button">👉 Game Recommendation</button>
+      <a
+        href="https://www.kqed.org/mindshift/34761/10-free-online-educational-game-sites"
+        target="blank"
+        class="free-onlineGames"
+      >
+        💻🧒Free Online Games
+      </a>
+      <hr />
+
+      <p class="footer">
+        This page was coded by Lacey Chaney with HTML, CSS, and JavaScript
+      </p>
+    </div>
+
+    <script>
+      function rec() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old is your child?");
+        let subject = prompt("Do the need help with reading, math, or both?");
+        let email = prompt("What is your email address?");
+
+        if (name.length > 0 && email.length > 0) {
+          alert(
+            "Thank you!🙂 Your child's website recommendations will be emailed shortly. Meanwhile, visit the Free Online Games link!💻👍"
+          );
+        } else {
+          alert(
+            "Oops!😟 Answer all questions in order to get your game recommendation sent to your email. Please try again."
+          );
+        }
+      }
+
+      let recButton = document.querySelector(".rec-button");
+      recButton.addEventListener("click", rec);
+    </script>
+  </body>
+</html>
